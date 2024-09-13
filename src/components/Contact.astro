@@ -1,0 +1,29 @@
+---
+import TitleSection from './TitleSection.astro';
+import Button from './Button.astro';
+import CopyIcon from '../assets/icons/CopyIcon.astro';
+import GithubIcon from '../assets/icons/GithubIcon.astro';
+---
+
+<section
+  id='contact'
+  class='flex flex-col m-10 gap-6 justify-center mx-auto text-center items-center lg:m-20'
+>
+  <TitleSection>Contacto</TitleSection>
+
+  <div
+    class='bg-blue w-[320px] lg:w-[460px] flex-col flex justify-center items-center text-bg mx-auto p-4 shadow border-2 border-black'
+  >
+    <p class='text-pretty text-xl font-bold'>¡Hablemos!</p>
+    <p class='text-pretty text-lg mb-2'>Envíame un correo a:</p>
+
+    <Button bg='bg-pink' color='text-primary'
+      >miriamsobrinodev@gmail.com <CopyIcon /></Button
+    >
+  </div>
+</section>
+<style>
+  .shadow {
+    box-shadow: 0.4rem 0.4rem var(--primary);
+  }
+</style>

@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --bg: #fff8eb;
+  --primary: #1e1e1e;
+  --green: #45ff67;
+  --pink: #ff8bd6;
+  --orange: #ffd54c;
+  --blue: #4128ff;
+  --violet: #c06dff;
+
+}
+
+html {
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  background-image: linear-gradient(to right, #e6e6e6 1px, transparent 1px),
+    linear-gradient(to bottom, #e6e6e6 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position-y: 36%;
+  scroll-behavior: smooth;
+
+}
+code {
+  font-family:
+    Menlo,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New,
+    monospace;
+}
+h1 {
+  font-family: "Paytone One", sans-serif;
+  font-size: 2.6rem;
+}
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+

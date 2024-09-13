@@ -1,0 +1,78 @@
+---
+import Button from './Button.astro';
+import HamburgerIcon from '../assets/icons/HamburgerIcon.astro';
+import CloseIcon from '../assets/icons/CloseIcon.astro';
+---
+
+<nav
+  class='w-full py-4 lg:p-0 lg:flex-row flex flex-col mx-auto items-center justify-center bg-blue fixed top-0 z-50 nav-header'
+>
+  <div id='mobile-menu' class='block lg:hidden cursor-pointer'>
+    <HamburgerIcon />
+  </div>
+  <div id='close-mobile-menu' class='hidden lg:hidden cursor-pointer'>
+    <CloseIcon />
+  </div>
+  <ul
+    id='menu'
+    class='hidden w-full lg:w-auto mx-auto lg:flex lg:flex-row gap-10 justify-center items-center py-[12px] text-bg'
+  >
+    <li
+      class='transition-all p-2 lg:p-0 text-lg text-center duration-150 border-b-2 border-bg lg:border-0 w-full lg:w-auto opacity-90 hover:opacity-100 hover:scale-105 cursor-pointer'
+    >
+      <a href='#'> Inicio</a>
+    </li>
+    <li
+      class='transition-all duration-150 p-2 lg:p-0 text-center opacity-90 border-b-2 border-bg lg:border-0 w-full lg:w-auto :opacity-100 hover:scale-105 cursor-pointer'
+    >
+      <a href='#projects'> Proyectos</a>
+    </li>
+    <li
+      class='transition-all duration-150 p-2 lg:p-0 mb-4 lg:mb-0 text-center opacity-90 hover:opacity-100 border-b-2 border-bg lg:border-0 w-full lg:w-auto hover:scale-105 cursor-pointer'
+    >
+      <a href='#about'> Sobre mí</a>
+    </li>
+
+    <Button bg='bg-pink' color='text-primary'
+      ><a href='#contact'>Contacto</a></Button
+    >
+  </ul>
+</nav>
+<style>
+  .nav-header {
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.3s ease;
+  }
+
+  .nav-header.scrolled {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 255, 0.7);
+  }
+</style>
+<script>
+  const mobileMenuIcon = document.getElementById('mobile-menu');
+  const closeMenuIcon = document.getElementById('close-mobile-menu');
+  const menu = document.getElementById('menu');
+
+  mobileMenuIcon.addEventListener('click', () => {
+    menu.classList.remove('hidden');
+    mobileMenuIcon.classList.add('hidden');
+    closeMenuIcon.classList.remove('hidden');
+  });
+
+  closeMenuIcon.addEventListener('click', () => {
+    menu.classList.add('hidden');
+    mobileMenuIcon.classList.remove('hidden');
+    closeMenuIcon.classList.add('hidden');
+  });
+
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav-header');
+
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>

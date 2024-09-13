@@ -1,0 +1,39 @@
+---
+import Button from './Button.astro';
+---
+
+<section
+  class='flex-col-reverse w-full mb-10 lg:flex-row lg:w-[60%] mt-28 lg:mb-6 flex mx-auto gap-6 justify-center items-center relative'
+>
+  <div
+    class='ml-10 w-[360px] justify-center items-center flex-col relative lg:ml-0'
+  >
+    <h1 class='z-10 -mt-12'>Miriam Sobrino</h1>
+    <h2
+      class='bg-orange px-4 py-[1px] inline-block -rotate-3 -z-10 absolute bottom-[150px]'
+    >
+      Frontend Developer
+    </h2>
+
+    <p
+      class='mt-14 -ml-10 lg:ml-0 text-balance text-center lg:text-left text-md mb-4'
+    >
+      Transformo ideas en interfaces web únicas, combinando programación y
+      diseño para lograr una buena experiencia de usuario.
+    </p>
+
+    <img
+      class='hidden w-10 lg:absolute lg:block -left-16 top-6 rotate-[50deg]'
+      src='./arrow-doodle.png'
+    />
+    <Button
+      bg='bg-blue'
+      color='text-bg  justify-center mx-auto  inline-block ml-20 lg:justify-start lg:ml-0'
+      >Descargar CV</Button
+    >
+  </div>
+  <div>
+    <img class='w-96 pr-4 lg:pr-0' src='./foto-portfolio-final.png' />
+  </div>
+</section>
+<style></style>

@@ -1,0 +1,21 @@
+---
+import CardProject from './CardProject.astro';
+import TitleSection from './TitleSection.astro';
+---
+
+<section
+  id='projects'
+  class='flex flex-col mt-60 gap-6 w-full justify-center h-96 lg:-mt-6 items-center mx-auto'
+>
+  <TitleSection>Proyectos</TitleSection>
+  <div class='flex-col flex gap-10 lg:flex-row'>
+    <CardProject />
+  </div>
+</section>
+
+<style>
+  .shadow {
+    border: 2px solid var(--primary);
+    box-shadow: 0.4rem 0.4rem var(--primary);
+  }
+</style>

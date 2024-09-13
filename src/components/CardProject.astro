@@ -1,0 +1,144 @@
+---
+import ArrowIcon from '../assets/icons/ArrowIcon.astro';
+import AstroIcon from '../assets/icons/AstroIcon.astro';
+import FirebaseIcon from '../assets/icons/FirebaseIcon.astro';
+import GithubIcon from '../assets/icons/GithubIcon.astro';
+import TailwindIcon from '../assets/icons/TailwindIcon.astro';
+import MongoIcon from '../assets/icons/MongoIcon.astro';
+import NodeIcon from '../assets/icons/NodeIcon.astro';
+import ReactIcon from '../assets/icons/ReactIcon.astro';
+import ViteIcon from '../assets/icons/ViteIcon.astro';
+
+const PROJECTS = [
+  {
+    title: 'Giphy Clone',
+    description:
+      ' Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    image: './giphy.png',
+    link: 'https://miriamsobrino.github.io/giphy-clone',
+    github: '#',
+    tags: ['React', 'Vite'],
+  },
+  {
+    title: 'Blog App',
+    description:
+      ' Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    image: './blog.jpg',
+    link: 'https://miriamsobrino.github.io/giphy-clone',
+    github: '#',
+    tags: ['React', 'Vite', 'Tailwind', 'Node', 'Mongo', 'Firebase'],
+  },
+  {
+    title: 'ShopNow',
+    description:
+      ' Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    image: './giphy.png',
+    link: 'https://miriamsobrino.github.io/giphy-clone',
+    github: '#',
+    tags: ['React', 'Vite', 'Tailwind'],
+  },
+];
+
+const ICONS = {
+  React: ReactIcon,
+  Vite: ViteIcon,
+  Astro: AstroIcon,
+  Mongo: MongoIcon,
+  Firebase: FirebaseIcon,
+  Node: NodeIcon,
+  Tailwind: TailwindIcon,
+};
+---
+
+{
+  PROJECTS.map((project) => (
+    <article class='flex-col flex gap-1 border-primary border-2 w-80 p-2  bg-white relative group overflow-hidden shadow opacity-0 '>
+      <div class='w-full h-[200px] '>
+        <img
+          src={project.image}
+          class='w-full h-full object-cover object-top'
+        />
+
+        <div class='absolute inset-0 bg-white flex flex-col justify-center gap-6 p-4 h-full transform translate-y-full  group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-in-out'>
+          <div class='flex justify-between items-center'>
+            <h4 class='text-xl font-bold'>{project.title}</h4>
+            <div class='flex items-center gap-1'>
+              <a href={project.link} target='_blank' class='icon-projects'>
+                <ArrowIcon
+                  width='24px'
+                  height='24px'
+                  class=' hover:scale-110 transition-all duration-300'
+                />
+              </a>
+              <GithubIcon
+                width='24px'
+                class=' hover:scale-105 cursor-pointer transition-all duration-300'
+              />
+            </div>
+          </div>
+          <p class='text-sm mt-2'>{project.description}</p>
+          <div class='flex gap-2 mt-2'>
+            {project.tags.map((tag) => {
+              const Icon = ICONS[tag];
+              return (
+                <div class='flex items-center gap-1'>
+                  {Icon && <Icon width='20px' height='20px' />}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </article>
+  ))
+}
+<style>
+  .shadow {
+    box-shadow: 0.4rem 0.4rem var(--primary);
+  }
+  .shadow:hover {
+    box-shadow: 0.6rem 0.6rem var(--primary);
+    transition: all;
+    transition-duration: 100ms;
+    transform: translate(-10px);
+  }
+
+  .animation {
+    animation: fade-in 0.6s linear;
+  }
+
+  @keyframes fade-in {
+    from {
+      scale: 0.8em;
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      scale: 1em;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+</style>
+<script>
+  window.addEventListener('load', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animation');
+          entry.target.classList.remove('opacity-0');
+
+          observer.unobserve(entry.target);
+
+          entry.target.addEventListener('animationend', () => {
+            entry.target.classList.remove('animation');
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll('article').forEach((article) => {
+      observer.observe(article);
+    });
+  });
+</script>
