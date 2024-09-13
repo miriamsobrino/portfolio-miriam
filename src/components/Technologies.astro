@@ -14,15 +14,16 @@ const TECHNOLOGIES = [
 ---
 
 <div
-  class='w-full overflow-x-hidden bg-primary text-nowrap text-bg py-2 relative'
+  class='w-full overflow-x-hidden bg-primary text-nowrap flex text-bg py-2 relative'
 >
-  <div class='flex gap-10 scroll text-2xl min-w-max'>
+  <div class='flex gap-10 scroll text-2xl min-w-max lg:w-full'>
     {TECHNOLOGIES.map((tech) => <span>{tech}</span>)}
   </div>
 </div>
 
 <style>
   .scroll {
+    display: flex;
     animation: scroll 20s linear infinite;
   }
 
@@ -32,6 +33,17 @@ const TECHNOLOGIES = [
     }
     to {
       transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .scroll {
+      animation: scroll 20s linear infinite;
+      animation-delay: -7s; /* Ajusta este valor para móviles */
+    }
+
+    .text-2xl {
+      font-size: 1.25rem; /* Ajusta el tamaño del texto si es necesario */
     }
   }
 </style>
