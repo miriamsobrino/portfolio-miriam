@@ -16,14 +16,14 @@ const TECHNOLOGIES = [
 <div
   class='w-full overflow-x-hidden bg-primary text-nowrap text-bg py-2 relative'
 >
-  <div class='flex gap-10 scroll text-2xl'>
+  <div class='flex gap-10 scroll text-2xl min-w-max'>
     {TECHNOLOGIES.map((tech) => <span>{tech}</span>)}
   </div>
 </div>
 
 <style>
   .scroll {
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
   }
 
   @keyframes scroll {
@@ -31,7 +31,7 @@ const TECHNOLOGIES = [
       transform: translateX(100%);
     }
     to {
-      transform: translateX(-80%);
+      transform: translateX(-100%);
     }
   }
 </style>
