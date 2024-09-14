@@ -2,6 +2,8 @@
 import Button from './Button.astro';
 import HamburgerIcon from '../assets/icons/HamburgerIcon.astro';
 import CloseIcon from '../assets/icons/CloseIcon.astro';
+import LinkedinIcon from '../assets/icons/LinkedinIcon.astro';
+import GithubIcon from '../assets/icons/GithubIcon.astro';
 ---
 
 <nav
@@ -36,6 +38,25 @@ import CloseIcon from '../assets/icons/CloseIcon.astro';
     <Button bg='bg-pink' color='text-primary'
       ><a href='#contact'>Contacto</a></Button
     >
+    <div class='flex gap-4 items-center justify-center mt-10 lg:mt-0'>
+      <a
+        href='https://www.linkedin.com/in/miriam-sobrino-5295a5150/'
+        target='_blank'
+      >
+        <LinkedinIcon
+          class='hover:scale-110 transition-all duration-300 cursor-pointer'
+        /></a
+      >
+      <a href='https://github.com/miriamsobrino' target='_blank'>
+        <GithubIcon
+          width='28'
+          height='28'
+          stroke='#fff8eb'
+          fill='#fff8eb'
+          class='hover:scale-110 transition-all duration-300 cursor-pointer'
+        /></a
+      >
+    </div>
   </ul>
 </nav>
 <style>

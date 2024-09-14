@@ -13,22 +13,24 @@ const PROJECTS = [
   {
     title: 'Giphy Clone',
     description:
-      ' Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+      'Creación de un clon de Giphy utilizando su API para buscar y mostrar los gifs. Uso de React con Vite y Tailwind CSS para un diseño responsive.',
     image: './giphy.png',
     link: 'https://miriamsobrino.github.io/giphy-clone',
-    github: '#',
-    tags: ['React', 'Vite'],
+    github: 'https://github.com/miriamsobrino/giphy-clone',
+    tags: ['React', 'Vite', 'Tailwind'],
   },
   {
     title: 'Blog App',
     description:
-      ' Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+      'Desarrollo de un blog utilizando Express y Node.js para el backend, y MongoDB junto con Firebase para la base de datos.',
     image: './blog.jpg',
-    link: 'https://miriamsobrino.github.io/giphy-clone',
-    github: '#',
+    link: 'https://blog-app-mir.vercel.app/',
+    github: 'https://github.com/miriamsobrino/blogApp',
     tags: ['React', 'Vite', 'Tailwind', 'Node', 'Mongo', 'Firebase'],
   },
+  /* 
   {
+    
     title: 'ShopNow',
     description:
       ' Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
@@ -36,7 +38,8 @@ const PROJECTS = [
     link: 'https://miriamsobrino.github.io/giphy-clone',
     github: '#',
     tags: ['React', 'Vite', 'Tailwind'],
-  },
+
+  }, */
 ];
 
 const ICONS = {
@@ -59,9 +62,9 @@ const ICONS = {
           class='w-full h-full object-cover object-top'
         />
 
-        <div class='absolute inset-0 bg-white flex flex-col justify-center gap-6 p-4 h-full transform translate-y-full  group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-in-out'>
-          <div class='flex justify-between items-center'>
-            <h4 class='text-xl font-bold'>{project.title}</h4>
+        <div class='absolute inset-0 bg-white flex flex-col justify-between gap-6 p-4 h-full transform translate-y-full  group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-in-out'>
+          <div class='flex justify-between items-center  '>
+            <h4 class='text-xl font-bold '>{project.title}</h4>
             <div class='flex items-center gap-1'>
               <a href={project.link} target='_blank' class='icon-projects'>
                 <ArrowIcon
@@ -70,13 +73,15 @@ const ICONS = {
                   class=' hover:scale-110 transition-all duration-300'
                 />
               </a>
-              <GithubIcon
-                width='24px'
-                class=' hover:scale-105 cursor-pointer transition-all duration-300'
-              />
+              <a href={project.github} target='_blank' class='icon-projects'>
+                <GithubIcon
+                  width='24px'
+                  class=' hover:scale-105 cursor-pointer transition-all duration-300'
+                />
+              </a>
             </div>
           </div>
-          <p class='text-sm mt-2'>{project.description}</p>
+          <p class='text-sm '>{project.description}</p>
           <div class='flex gap-2 mt-2'>
             {project.tags.map((tag) => {
               const Icon = ICONS[tag];
