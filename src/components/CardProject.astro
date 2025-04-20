@@ -1,54 +1,8 @@
 ---
+import { PROJECTS } from '../constants/constants.astro';
+import { ICONS } from '../constants/constants.astro';
 import ArrowIcon from '../assets/icons/ArrowIcon.astro';
-import AstroIcon from '../assets/icons/AstroIcon.astro';
-import FirebaseIcon from '../assets/icons/FirebaseIcon.astro';
 import GithubIcon from '../assets/icons/GithubIcon.astro';
-import TailwindIcon from '../assets/icons/TailwindIcon.astro';
-import MongoIcon from '../assets/icons/MongoIcon.astro';
-import NodeIcon from '../assets/icons/NodeIcon.astro';
-import ReactIcon from '../assets/icons/ReactIcon.astro';
-import ViteIcon from '../assets/icons/ViteIcon.astro';
-
-const PROJECTS = [
-  {
-    title: 'BlogApp',
-    description:
-      'Desarrollo de un blog utilizando Express y Node.js para el backend, y MongoDB junto con Firebase para la base de datos.',
-    image: './blog.webp',
-    link: 'https://blog-app-mir.vercel.app/',
-    github: 'https://github.com/miriamsobrino/blogApp',
-    tags: ['React', 'Vite', 'Tailwind', 'Node', 'Mongo', 'Firebase'],
-  },
-  {
-    title: 'Giphy Clone',
-    description:
-      'Creación de un clon de Giphy utilizando su API para buscar y mostrar los gifs. Uso de React con Vite y Tailwind CSS para un diseño responsive.',
-    image: './giphy.webp',
-    link: 'https://miriamsobrino.github.io/giphy-clone',
-    github: 'https://github.com/miriamsobrino/giphy-clone',
-    tags: ['React', 'Vite', 'Tailwind'],
-  },
-
-  {
-    title: 'ShopNow',
-    description:
-      ' Desarrollo de una tienda online integrando una API de productos. Uso de un contexto global y de localStorage para guardar el carrito de compra del usuario.',
-    image: './shop-now.webp',
-    link: 'https://miriamsobrino.github.io/shop-now',
-    github: 'https://github.com/miriamsobrino/shop-now',
-    tags: ['React', 'Vite', 'Tailwind'],
-  },
-];
-
-const ICONS = {
-  React: ReactIcon,
-  Vite: ViteIcon,
-  Astro: AstroIcon,
-  Mongo: MongoIcon,
-  Firebase: FirebaseIcon,
-  Node: NodeIcon,
-  Tailwind: TailwindIcon,
-};
 ---
 
 {
@@ -96,16 +50,6 @@ const ICONS = {
   ))
 }
 <style>
-  .shadow {
-    box-shadow: 0.4rem 0.4rem var(--primary);
-  }
-  .shadow:hover {
-    box-shadow: 0.6rem 0.6rem var(--primary);
-    transition: all;
-    transition-duration: 100ms;
-    transform: translate(-10px);
-  }
-
   .animation {
     animation: fade-in 0.6s linear;
   }
@@ -113,7 +57,7 @@ const ICONS = {
   @keyframes fade-in {
     from {
       scale: 0.8em;
-      transform: translateY(40px);
+      transform: translateY(30px);
       opacity: 0;
     }
     to {

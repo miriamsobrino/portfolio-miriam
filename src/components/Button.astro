@@ -3,18 +3,6 @@ const { bg, color, onClick } = Astro.props;
 ---
 
 <button
-  class=`py-2 px-4 ${bg} rounded-full gap-2 shadow flex mx-auto text-center justify-center  lg:w-auto items-center ${color}`
+  class=`py-2 px-4 ${bg} rounded-full gap-2 button flex mx-auto text-center justify-center  lg:w-auto items-center ${color}`
   onclick={onClick}><slot /></button
 >
-<style>
-  .shadow {
-    border: 2px solid var(--primary);
-    box-shadow: 0.1rem 0.1rem var(--primary);
-  }
-  .shadow:hover {
-    box-shadow: 0.3rem 0.3rem var(--primary);
-    transition: all;
-    transition-duration: 150ms;
-    transform: translate(-3px);
-  }
-</style>

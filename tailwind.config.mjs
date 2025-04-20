@@ -8,9 +8,10 @@ export default {
         primary: "var(--primary)",
         green: "var(--green)",
         pink: "var(--pink)",
+        yellow: "var(--yellow)",
         orange: "var(--orange)",
         blue: "var(--blue)",
-        violet: "var(--violet)"
+        indigo: "var(--indigo)"
       },
     },
   },

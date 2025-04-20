@@ -1,6 +1,5 @@
 import { Toaster, toast } from 'sonner';
 import { CopyIcon } from '../assets/icons/CopyIcon';
-import './ToasterComponent.css';
 
 export const ToasterComponent = () => {
   const handleClick = () => {
@@ -17,9 +16,9 @@ export const ToasterComponent = () => {
   };
   return (
     <>
-      <Toaster />
+      <Toaster toastOptions={{ className: 'shadow-toaster rounded-none' }} />
       <button
-        className={`py-2 px-4 bg-pink rounded-full gap-2 shadow-toaster flex mx-auto text-center justify-center lg:w-auto items-center text-primary`}
+        className={`py-2 px-4 bg-pink rounded-full gap-2 button flex mx-auto text-center justify-center lg:w-auto items-center text-primary`}
         onClick={handleClick}
       >
         miriamsobrinodev@gmail.com <CopyIcon />

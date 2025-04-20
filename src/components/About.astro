@@ -4,18 +4,19 @@ import TitleSection from './TitleSection.astro';
 
 <section
   id='about'
-  class='flex flex-col mt-[270px] gap-6 justify-center items-center mb-10 lg:mt-24'
+  class='flex flex-col mt-[270px] gap-6 relative justify-center items-center mb-10 lg:mt-24'
 >
   <TitleSection>Sobre mí</TitleSection>
 
   <div
-    class='bg-violet w-[320px] text-left lg:w-[800px] mx-auto px-2 lg:px-4 py-10 shadow border-2 border-black relative mt-4'
+    class='bg-indigo w-[328px] text-left lg:w-[660px] lg:text-balance mx-auto px-2 lg:px-4 py-10 shadow border-2 border-black relative mt-4'
   >
     <img
-      src='./smile-sticker.png'
-      class='w-20 absolute right-[120px] lg:right-[360px] -top-10 rotate-animation'
+      src='./sticker-smile.png'
+      class='w-20 absolute right-[120px] lg:right-[287px] -top-10 rotate-12'
       alt=''
     />
+
     <p class='mb-4 lg:text-pretty mt-2'>
       Después de años en el mundo del diseño, descubrí mi pasión por la
       programación, lo que me permite crear interfaces combinando mi experiencia
@@ -29,26 +30,8 @@ import TitleSection from './TitleSection.astro';
     </p>
 
     <p class='lg:text-pretty'>
-      Además, disfruto enfrentándome a nuevos retos y explorando las últimas
-      tecnologías y tendencias en diseño para mantenerme siempre actualizada.
+      Disfruto enfrentándome a nuevos retos y explorando las últimas tecnologías
+      y tendencias en diseño para mantenerme siempre actualizada.
     </p>
   </div>
 </section>
-<style>
-  .shadow {
-    box-shadow: 0.4rem 0.4rem var(--primary);
-  }
-
-  .rotate-animation {
-    animation: rotation 1s infinite alternate;
-  }
-
-  @keyframes rotation {
-    from {
-      transform: rotate(-40deg);
-    }
-    to {
-      transform: rotate(20deg);
-    }
-  }
-</style>
