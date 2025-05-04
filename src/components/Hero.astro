@@ -6,29 +6,29 @@ import Button from './Button.astro';
   class='flex-col-reverse w-full mb-10 lg:flex-row lg:w-[60%] mt-20 lg:mt-28 lg:mb-6 flex mx-auto gap-6 justify-center items-center relative'
 >
   <div
-    class='ml-10 w-[360px] justify-center items-center flex-col relative lg:ml-0'
+    class='w-[360px] flex justify-center items-center lg:items-start flex-col relative'
   >
-    <h1 class='z-10 -mt-12'>Miriam Sobrino</h1>
+    <h1 class='z-10 -mt-8 lg:-mt-12'>Miriam Sobrino</h1>
     <h2
-      class='bg-orange px-4 py-[1px] inline-block -rotate-3 -z-10 absolute bottom-[150px]'
+      class='bg-yellow px-4 py-[1px] shadow inline-block -rotate-1 -z-10 absolute bottom-[154px] lg:bottom-[148px]'
     >
       Frontend Developer
     </h2>
 
     <p
-      class='mt-14 -ml-10 lg:ml-0 text-balance text-center lg:text-left text-md mb-4'
+      class='mt-20 lg:mt-16 text-balance text-center lg:text-left text-md mb-4'
     >
       Transformo ideas en interfaces web únicas, combinando programación y
       diseño para lograr una buena experiencia de usuario.
     </p>
 
     <img
-      class='hidden w-10 lg:absolute lg:block -left-16 top-6 rotate-[50deg]'
+      class='hidden w-10 lg:absolute lg:block -left-16 top-2 rotate-[50deg]'
       src='./arrow-doodle.png'
     />
     <Button
       bg='bg-blue'
-      color='text-bg  justify-center mx-auto  inline-block ml-20 lg:justify-start lg:ml-0'
+      color='text-bg justify-center mx-auto inline-block  lg:justify-start lg:ml-0'
       ><a
         href='https://drive.google.com/file/d/1CzeGYh7zTd1eTe-jeFlqjbqh8hk2mZ66/view'
         target='_blank'>Descargar CV</a
@@ -36,10 +36,6 @@ import Button from './Button.astro';
     >
   </div>
   <div>
-    <img
-      class='w-96 pr-4 lg:pr-0 aspect-[2000/2667]'
-      src='./foto-portfolio-final1.webp'
-    />
+    <img class='w-96 pr-4 lg:pr-0' src='./foto-portfolio-final1.webp' />
   </div>
 </section>
-<style></style>

@@ -1,0 +1,52 @@
+---
+import AstroIcon from '../assets/icons/AstroIcon.astro';
+import FirebaseIcon from '../assets/icons/FirebaseIcon.astro';
+import MongoIcon from '../assets/icons/MongoIcon.astro';
+import NodeIcon from '../assets/icons/NodeIcon.astro';
+import ReactIcon from '../assets/icons/ReactIcon.astro';
+import TailwindIcon from '../assets/icons/TailwindIcon.astro';
+import TypescriptIcon from '../assets/icons/TypescriptIcon.astro';
+import ViteIcon from '../assets/icons/ViteIcon.astro';
+
+export const PROJECTS = [
+  {
+    title: 'TaskNow',
+    description:
+      'Herramienta de gestión tareas con funcionalidad drag & drop, usando React y Tailwind para el frontend y Firebase como backend.',
+    image: './tasknow.webp',
+    link: 'https://task-now.vercel.app/',
+    github: 'https://github.com/miriamsobrino/task-now',
+    tags: ['React', 'Vite', 'Typescript', 'Tailwind', 'Firebase'],
+  },
+  {
+    title: 'Giphy Clone',
+    description:
+      'Clon de Giphy para buscar y mostrar gifs utilizando su API. Uso de React con Vite y Tailwind CSS para un diseño responsive.',
+    image: './giphy.webp',
+    link: 'https://miriamsobrino.github.io/giphy-clone',
+    github: 'https://github.com/miriamsobrino/giphy-clone',
+    tags: ['React', 'Vite', 'Tailwind'],
+  },
+
+  {
+    title: 'ShopNow',
+    description:
+      'Tienda online integrando una API de productos. Uso de contexto global y de localStorage para guardar el carrito de compra del usuario.',
+    image: './shop-now.webp',
+    link: 'https://miriamsobrino.github.io/shop-now',
+    github: 'https://github.com/miriamsobrino/shop-now',
+    tags: ['React', 'Vite', 'Tailwind'],
+  },
+];
+
+export const ICONS = {
+  React: ReactIcon,
+  Vite: ViteIcon,
+  Typescript: TypescriptIcon,
+  Astro: AstroIcon,
+  Mongo: MongoIcon,
+  Firebase: FirebaseIcon,
+  Node: NodeIcon,
+  Tailwind: TailwindIcon,
+};
+---
